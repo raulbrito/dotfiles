@@ -10,7 +10,7 @@ filetype plugin indent on
 "solarized configuration
 syntax enable
 let g:solarized_termcolors=256
-set background=light
+set background=dark
 colorscheme solarized
 
 if has('gui_running')
@@ -113,7 +113,7 @@ augroup END
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :set t_Co=256 " 256 colors
-:set background=light
+:set background=dark
 ":color grb256
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -402,3 +402,4 @@ command! OpenChangedFiles :call OpenChangedFiles()
 " Insert the current time
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 command! InsertTime :normal a<c-r>=strftime('%F %H:%M:%S.0 %z')<cr>
+
