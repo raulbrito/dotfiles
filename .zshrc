@@ -32,7 +32,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ant brew bundler capistrano cp history jira rails3 rsync vagrant taskwarrior)
+plugins=(ant brew bundler capistrano cp history jira rails3 rsync vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,6 +71,8 @@ alias hc='cd ~/work/granngarden/bin/platform &&  ant clean all'
 alias hcs='cd ~/work/granngarden/bin/platform && ant clean all && ./hybrisserver.sh debug'
 alias hs='cd ~/work/granngarden/bin/platform && ./hybrisserver.sh debug'
 
+alias maxbo='cd ~/work/maxbo/hybris'
+
 # myIP address
 function myip() {
     ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
@@ -79,6 +81,9 @@ function myip() {
     ifconfig en1 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en1 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
     ifconfig en1 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en1 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
 }
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 
 

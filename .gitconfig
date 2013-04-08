@@ -26,12 +26,12 @@
     spull = !git checkout master && git-svn fetch && git-svn rebase && git checkout - && git rebase master
     spush = !git checkout master && git-svn dcommit && git checkout -
 [merge]
-	tool = diffmerge
+	tool = vimdiff
 #[mergetool "diffmerge"]
 #	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
 #	trustExitCode = true
 [diff]
-	tool = diffmerge
+	tool = vimdiff
 [difftool "diffmerge"]
 	cmd = diffmerge $LOCAL $REMOTE
 [core]
@@ -44,3 +44,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[difftool]
+	prompt = false
